@@ -1,11 +1,11 @@
 const Navbar = () => {
   return (
-    <nav className="flex flex-col lg:flex-row lg:items-center justify-between py-3 m-6">
+    <nav className="flex flex-col lg:flex-row lg:items-center justify-between py-3 mx-6 mb-10">
       <div className="sm:mb-4">
         <h3 className="text-xl font-bold text-gray-600">
           {new Date().toUTCString().slice(0, 16)}
         </h3>
-        <h1 className="text-2xl font-bold">CrispyConer</h1>
+        <h1 className="text-2xl font-bold text-green-500">CrispyConer</h1>
       </div>
       <div>
         <input
