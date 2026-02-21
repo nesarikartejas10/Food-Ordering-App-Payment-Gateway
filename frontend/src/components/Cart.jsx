@@ -1,12 +1,18 @@
 import { IoMdClose } from "react-icons/io";
+import ItemCartCard from "./ItemCartCard";
 
 const Cart = () => {
   return (
     <aside className="fixed right-0 top-0 w-full lg:w-[25vw] h-full bg-white p-5">
       <div className="flex items-center justify-between my-3">
         <span className="text-xl font-bold text-gray-800">My Order</span>
-        <IoMdClose className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-xl rounded-md hover:text-red-400 hover:border-red-400 cursor-pointer" />
+        <IoMdClose className="border-2 border-gray-600 text-gray-600 font-bold p-1 text-xl rounded-md hover:text-red-400 hover:border-red-400 transition-all ease-linear cursor-pointer" />
       </div>
+
+      <ItemCartCard />
+      <ItemCartCard />
+      <ItemCartCard />
+      <ItemCartCard />
 
       <div className="absolute bottom-0">
         <h3 className="font-semibold text-gray-800">Item:</h3>

@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 const FoodCard = ({ foodData }) => {
   const { id, name, img, price, desc, rating } = foodData;
   return (
-    <div className="font-bold w-60 bg-white p-5 flex flex-col rounded-lg gap-3">
+    <div className="font-bold w-60 bg-white p-5 flex flex-col rounded-lg gap-3 shadow-md">
       <img
         className="w-auto h-32.5 hover:scale-110 rounded-lg overflow-hidden cursor-grab transition-all duration-500 ease-in-out"
         src={img}
