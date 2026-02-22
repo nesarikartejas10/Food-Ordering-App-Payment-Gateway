@@ -3,11 +3,13 @@ import { FiPlusCircle } from "react-icons/fi";
 import { MdCurrencyRupee } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { MdRemoveShoppingCart } from "react-icons/md";
 import {
   decreaseQty,
   increaseQty,
   removeFromCart,
 } from "../features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 const ItemCartCard = ({ foodData }) => {
   const { id, img, name, price, qty } = foodData;
@@ -22,6 +24,9 @@ const ItemCartCard = ({ foodData }) => {
           <MdDelete
             onClick={() => {
               dispatch(removeFromCart(foodData));
+              toast(`${name} Removed!`, {
+                icon: <MdRemoveShoppingCart fill="red" size={18} />,
+              });
             }}
             size={17}
             className="text-gray-600 hover:text-red-500 transition-all ease-linear cursor-pointer"

@@ -10,6 +10,10 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
 
   const totalQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.qty * item.price,
+    0,
+  );
   return (
     <>
       <aside
@@ -37,7 +41,7 @@ const Cart = () => {
           <h3 className="font-semibold text-gray-800">Item: {totalQty}</h3>
           <h3 className="font-semibold text-gray-800 flex items-center">
             Total Amount: <MdCurrencyRupee />
-            {0}
+            {totalPrice}
           </h3>
           <hr className="w-[88vw] lg:w-[22.3vw] my-2" />
           <button className="font-bold bg-green-500 text-white px-3 py-2 rounded-md w-[88vw] lg:w-[22.3vw] mb-5">

@@ -2,6 +2,7 @@ import { MdCurrencyRupee } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
+import toast from "react-hot-toast";
 
 const FoodCard = ({ foodData }) => {
   const { id, name, img, price, desc, rating } = foodData;
@@ -32,6 +33,7 @@ const FoodCard = ({ foodData }) => {
         <button
           onClick={() => {
             dispatch(addToCart({ ...foodData, qty: 1 }));
+            toast.success(`${name} Added`);
           }}
           className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-md text-sm"
         >
