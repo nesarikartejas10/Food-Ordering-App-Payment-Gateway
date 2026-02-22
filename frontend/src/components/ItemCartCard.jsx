@@ -3,10 +3,14 @@ import { FiPlusCircle } from "react-icons/fi";
 import { MdCurrencyRupee } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../features/cart/cartSlice";
+import {
+  decreaseQty,
+  increaseQty,
+  removeFromCart,
+} from "../features/cart/cartSlice";
 
 const ItemCartCard = ({ foodData }) => {
-  const { img, name, price, qty } = foodData;
+  const { id, img, name, price, qty } = foodData;
   const dispatch = useDispatch();
   return (
     <div className="flex items-center gap-2 shadow-md rounded-lg p-2 mb-3">
@@ -32,11 +36,19 @@ const ItemCartCard = ({ foodData }) => {
 
           <div className="flex items-center gap-2">
             <FiMinusCircle
+              onClick={() => {
+                qty > 1
+                  ? dispatch(decreaseQty(id))
+                  : dispatch(removeFromCart(foodData));
+              }}
               size={17}
               className="hover:text-red-500 transition-all duration-300 ease-in-out cursor-pointer"
             />
             <span>{qty}</span>
             <FiPlusCircle
+              onClick={() => {
+                dispatch(increaseQty(id));
+              }}
               size={17}
               className="hover:text-green-500 transition-all duration-300 ease-in-out cursor-pointer"
             />
