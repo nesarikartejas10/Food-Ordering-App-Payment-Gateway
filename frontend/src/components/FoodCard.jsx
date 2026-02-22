@@ -1,8 +1,11 @@
 import { MdCurrencyRupee } from "react-icons/md";
 import { AiFillStar } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
 
 const FoodCard = ({ foodData }) => {
   const { id, name, img, price, desc, rating } = foodData;
+  const dispatch = useDispatch();
   return (
     <div className="font-bold w-60 bg-white p-5 flex flex-col rounded-lg gap-3 shadow-md">
       <img
@@ -26,7 +29,12 @@ const FoodCard = ({ foodData }) => {
           <AiFillStar className="text-yellow-400 mr-1" />
           {rating}
         </span>
-        <button className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-md text-sm">
+        <button
+          onClick={() => {
+            dispatch(addToCart({ ...foodData, qty: 1 }));
+          }}
+          className="p-1 text-white bg-green-500 hover:bg-green-600 rounded-md text-sm"
+        >
           Add to cart
         </button>
       </div>

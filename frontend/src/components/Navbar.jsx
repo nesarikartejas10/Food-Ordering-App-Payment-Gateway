@@ -9,7 +9,7 @@ const Navbar = () => {
       </div>
       <div>
         <input
-          className="p-3 border border-gray-400 text-sm outline-none rounded-lg w-full lg:w-[25vw]"
+          className="p-3 border border-gray-400 bg-white text-sm outline-none rounded-lg w-full lg:w-[25vw]"
           type="search"
           name="search"
           placeholder="Search food"
