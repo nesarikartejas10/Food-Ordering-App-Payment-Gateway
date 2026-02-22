@@ -21,9 +21,15 @@ const Cart = () => {
           />
         </div>
 
-        {cartItems.map((item) => {
-          return <ItemCartCard key={item.id} foodData={item} />;
-        })}
+        {cartItems.length > 0 ? (
+          cartItems.map((item) => {
+            return <ItemCartCard key={item.id} foodData={item} />;
+          })
+        ) : (
+          <h2 className="h-[50%] flex justify-center items-center text-xl font-bold text-gray-800">
+            Your cart is empty
+          </h2>
+        )}
 
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800">Item:</h3>
