@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
+import { useNavigate } from "react-router";
 
 const Cart = () => {
   const [activeCart, setActiveCart] = useState(false);
@@ -14,6 +15,9 @@ const Cart = () => {
     (total, item) => total + item.qty * item.price,
     0,
   );
+
+  const navigate = useNavigate();
+
   return (
     <>
       <aside
@@ -46,7 +50,10 @@ const Cart = () => {
             {totalPrice}
           </h3>
           <hr className="w-[88vw] lg:w-[22.3vw] my-2" />
-          <button className="font-bold bg-green-500 text-white px-3 py-2 rounded-md w-[88vw] lg:w-[22.3vw] mb-5">
+          <button
+            onClick={() => navigate("/order-success")}
+            className="font-bold bg-green-500 text-white px-3 py-2 rounded-md w-[88vw] lg:w-[22.3vw] mb-5"
+          >
             Check Out
           </button>
         </div>
