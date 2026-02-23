@@ -38,7 +38,9 @@ const Cart = () => {
         )}
 
         <div className="absolute bottom-0">
-          <h3 className="font-semibold text-gray-800">Item: {totalQty}</h3>
+          <h3 className="font-semibold text-gray-800">
+            Item: {cartItems.length}
+          </h3>
           <h3 className="font-semibold text-gray-800 flex items-center">
             Total Amount: <MdCurrencyRupee />
             {totalPrice}

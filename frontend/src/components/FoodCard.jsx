@@ -5,7 +5,7 @@ import { addToCart } from "../features/cart/cartSlice";
 import toast from "react-hot-toast";
 
 const FoodCard = ({ foodData }) => {
-  const { id, name, img, price, desc, rating } = foodData;
+  const { id, name, img, price, desc, rating, category } = foodData;
   const dispatch = useDispatch();
   return (
     <div className="font-bold w-60 bg-white p-5 flex flex-col rounded-lg gap-3 shadow-md">
@@ -24,6 +24,9 @@ const FoodCard = ({ foodData }) => {
       </div>
       <p className="text-sm text-gray-600 font-normal">
         {desc.slice(0, 50)}...
+      </p>
+      <p className="mr-auto text-xs border border-green-700 bg-green-400 text-white  rounded-md p-1">
+        {category}
       </p>
       <div className="flex items-center justify-between mt-auto">
         <span className="flex items-center text-sm">
