@@ -18,6 +18,11 @@ const FoodItems = () => {
 
   return (
     <section className="flex  flex-wrap gap-6 justify-center mx-6 lg:justify-start mt-10 mb-20">
+      {filterFoodByCategories.length === 0 && (
+        <h2 className="h-[50%] flex justify-center items-center text-xl font-bold text-gray-800">
+          No food available in this category
+        </h2>
+      )}
       {filterFoodByCategories.map((foodItem) => {
         return <FoodCard key={foodItem.id} foodData={foodItem} />;
       })}
