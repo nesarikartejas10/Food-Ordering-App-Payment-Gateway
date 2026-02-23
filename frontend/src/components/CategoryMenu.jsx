@@ -1,4 +1,8 @@
+import foodData from "../data/foodData";
+
 const CategoryMenu = () => {
+  const uniqueCategories = [...new Set(foodData.map((item) => item.category))];
+
   return (
     <section className="ml-6">
       <h3 className="text-xl font-semibold">Find the best food</h3>
@@ -9,30 +13,18 @@ const CategoryMenu = () => {
         >
           All
         </button>
-        <button
-          type="button"
-          className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white"
-        >
-          Lunch
-        </button>
-        <button
-          type="button"
-          className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white"
-        >
-          Breakfast
-        </button>
-        <button
-          type="button"
-          className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white"
-        >
-          Dinner
-        </button>
-        <button
-          type="button"
-          className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white"
-        >
-          Snacks
-        </button>
+
+        {uniqueCategories.map((category) => {
+          return (
+            <button
+              key={category}
+              type="button"
+              className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white"
+            >
+              {category}
+            </button>
+          );
+        })}
       </div>
     </section>
   );
