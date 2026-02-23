@@ -25,7 +25,7 @@ const FoodCard = ({ foodData }) => {
       <p className="text-sm text-gray-600 font-normal">
         {desc.slice(0, 50)}...
       </p>
-      <p className="mr-auto text-xs border border-green-700 bg-green-400 text-white  rounded-md p-1">
+      <p className="mr-auto text-xs bg-green-500 text-white  rounded-md p-1">
         {category}
       </p>
       <div className="flex items-center justify-between mt-auto">
