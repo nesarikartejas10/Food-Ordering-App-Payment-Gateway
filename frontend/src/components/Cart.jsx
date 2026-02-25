@@ -1,12 +1,39 @@
 import { IoMdClose } from "react-icons/io";
 import ItemCartCard from "./ItemCartCard";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
 import { useNavigate } from "react-router";
+import { api } from "../api/axios";
+import { resolve } from "node:dns";
+import toast from "react-hot-toast";
 
 const Cart = () => {
+  const loadScript = (src) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+
+      script.onload = () => {
+        resolve(true);
+      };
+
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  };
+
+  useEffect(async () => {
+    try {
+      await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+    } catch (error) {
+      toast.error("Razorpay SDK failed to load");
+      return;
+    }
+  }, []);
   const [activeCart, setActiveCart] = useState(false);
   const cartItems = useSelector((state) => state.cart.cart);
 
@@ -16,7 +43,7 @@ const Cart = () => {
     0,
   );
 
-  const navigate = useNavigate();
+  const handleCheckout = async (amount) => {};
 
   return (
     <>
@@ -50,7 +77,10 @@ const Cart = () => {
             {totalPrice}
           </h3>
           <hr className="w-[88vw] lg:w-[22.3vw] my-2" />
-          <button className="font-bold bg-green-500 text-white px-3 py-2 rounded-md w-[88vw] lg:w-[22.3vw] mb-5">
+          <button
+            onClick={() => handleCheckout(totalPrice)}
+            className="font-bold bg-green-500 text-white px-3 py-2 rounded-md w-[88vw] lg:w-[22.3vw] mb-5"
+          >
             Check Out
           </button>
         </div>
