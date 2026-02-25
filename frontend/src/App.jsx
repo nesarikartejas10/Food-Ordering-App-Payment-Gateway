@@ -3,7 +3,6 @@ import HomePage from "./pages/HomePage";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import { Toaster } from "react-hot-toast";
-import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   return (
@@ -12,14 +11,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route
-            path="/order-success"
-            element={
-              <ProtectedRoute>
-                <OrderSuccessPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/order-success" element={<OrderSuccessPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

@@ -1,12 +1,13 @@
 import { IoMdClose } from "react-icons/io";
 import ItemCartCard from "./ItemCartCard";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { api } from "../api/axios";
 import toast from "react-hot-toast";
+import { clearCart } from "../features/cart/cartSlice";
 
 const Cart = () => {
   const loadScript = (src) => {
@@ -43,6 +44,7 @@ const Cart = () => {
   );
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleCheckout = async (amount) => {
     try {
@@ -57,9 +59,6 @@ const Cart = () => {
         amount: order.amount,
 
         handler: async (response) => {
-          console.log("HANDLER CALLED");
-          console.log(response);
-
           try {
             const { data: verifyData } = await api.post("/verify-payment", {
               order_id: response.razorpay_order_id,
@@ -67,11 +66,11 @@ const Cart = () => {
               signature: response.razorpay_signature,
             });
 
-            console.log("VERIFY RESPONSE:", verifyData);
-
             if (verifyData.success) {
-              toast.success("Payment Successful");
               navigate("/order-success");
+              dispatch(clearCart());
+              localStorage.removeItem("cart");
+              toast.success("Payment Successful");
             } else {
               toast.error("Verification failed");
             }
