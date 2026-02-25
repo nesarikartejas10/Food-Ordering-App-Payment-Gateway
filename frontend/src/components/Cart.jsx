@@ -6,7 +6,6 @@ import { FaShoppingCart } from "react-icons/fa";
 import { MdCurrencyRupee } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { api } from "../api/axios";
-import { resolve } from "node:dns";
 import toast from "react-hot-toast";
 
 const Cart = () => {
@@ -26,9 +25,9 @@ const Cart = () => {
     });
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     try {
-      await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+      loadScript("https://checkout.razorpay.com/v1/checkout.js");
     } catch (error) {
       toast.error("Razorpay SDK failed to load");
       return;
@@ -43,7 +42,57 @@ const Cart = () => {
     0,
   );
 
-  const handleCheckout = async (amount) => {};
+  const navigate = useNavigate();
+
+  const handleCheckout = async (amount) => {
+    try {
+      //create order
+      const { data } = await api.post("/create-order", { amount });
+
+      const order = data.order;
+
+      const rzp = new window.Razorpay({
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+        order_id: order.id,
+        amount: order.amount,
+
+        handler: async (response) => {
+          console.log("HANDLER CALLED");
+          console.log(response);
+
+          try {
+            const { data: verifyData } = await api.post("/verify-payment", {
+              order_id: response.razorpay_order_id,
+              payment_id: response.razorpay_payment_id,
+              signature: response.razorpay_signature,
+            });
+
+            console.log("VERIFY RESPONSE:", verifyData);
+
+            if (verifyData.success) {
+              toast.success("Payment Successful");
+              navigate("/order-success");
+            } else {
+              toast.error("Verification failed");
+            }
+          } catch (error) {
+            console.log(error);
+            toast.error("Something went wrong");
+          }
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      });
+      rzp.open();
+    } catch (error) {
+      toast.error(
+        error?.response?.data?.message ||
+          error?.message ||
+          "Something went wrong during checkout",
+      );
+    }
+  };
 
   return (
     <>
