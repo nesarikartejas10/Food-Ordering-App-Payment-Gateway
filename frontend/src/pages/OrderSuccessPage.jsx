@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { PropagateLoader } from "react-spinners";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const OrderSuccessPage = () => {
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,6 +29,12 @@ const OrderSuccessPage = () => {
           <p className="text-gray-600 text-base text-center">
             We’ll notify you once it has been shipped.
           </p>
+          <button
+            className="p-1.5 text-white bg-green-500 hover:bg-green-600 rounded-md text-xl mt-4 font-semibold"
+            onClick={() => navigate("/")}
+          >
+            Continue Shopping
+          </button>
         </>
       )}
     </div>

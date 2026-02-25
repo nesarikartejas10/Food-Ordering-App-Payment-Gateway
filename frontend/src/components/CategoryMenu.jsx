@@ -1,5 +1,5 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
-import foodData from "../data/foodData";
 import { useDispatch, useSelector } from "react-redux";
 import { setCategory } from "../features/category/categorySlice";
 
@@ -7,10 +7,12 @@ const CategoryMenu = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const uniqueCategories = [
-      ...new Set(foodData.map((item) => item.category)),
-    ];
-    setCategories(uniqueCategories);
+    axios.get("http://localhost:5000/foods").then((res) => {
+      const uniqueCategories = [
+        ...new Set(res.data.map((item) => item.category)),
+      ];
+      setCategories(uniqueCategories);
+    });
   }, []);
 
   const dispatch = useDispatch();

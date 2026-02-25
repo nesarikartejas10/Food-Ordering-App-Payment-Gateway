@@ -1,0 +1,274 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "img": "https://img.freepik.com/free-photo/seafood-pizza_74190-5944.jpg?w=996&t=st=1693062328~exp=1693062928~hmac=53fd9ad496580db41c6ca8066510cd89c6b0a0389de8bb6b875a78a1eda09cb5",
+      "name": "Onion Pizza",
+      "price": 150,
+      "desc": "A delicious pizza topped with fresh onions for a delightful flavor combination.",
+      "category": "Lunch",
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "img": "https://w7.pngwing.com/pngs/339/55/png-transparent-pizza-margherita-italian-cuisine-hot-dog-pizza-cheese-pizza-thumbnail.png",
+      "name": "Margherita Pizza",
+      "price": 130,
+      "desc": "Classic Italian pizza with tomatoes, mozzarella, basil, and olive oil.",
+      "category": "Lunch",
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "img": "https://w7.pngwing.com/pngs/21/55/png-transparent-pepperoni-pizza-margarita-pizza-margherita-italian-cuisine-tomato-pizza-food-cheese-recipe-thumbnail.png",
+      "name": "Pepperoni Pizza",
+      "price": 160,
+      "desc": "Loaded with spicy pepperoni, melted cheese, and tangy tomato sauce.",
+      "category": "Lunch",
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "img": "https://w7.pngwing.com/pngs/569/109/png-transparent-pizza-with-vegetables-and-mushroom-toppings-sicilian-pizza-california-style-pizza-pizza-margherita-vegetarian-cuisine-pizza-food-recipe-gourmet-thumbnail.png",
+      "name": "Mushroom and Spinach Pizza",
+      "price": 140,
+      "desc": "Earthy mushrooms and fresh spinach with blended cheese.",
+      "category": "Lunch",
+      "rating": 4.2
+    },
+    {
+      "id": 5,
+      "img": "https://w7.pngwing.com/pngs/843/171/png-transparent-pizza-73-restaurant-catupiry-chicken-as-food-pizza-baked-goods-food-recipe-thumbnail.png",
+      "name": "BBQ Chicken Pizza",
+      "price": 170,
+      "desc": "Smoky BBQ chicken with red onions and cheese.",
+      "category": "Lunch",
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "img": "https://w7.pngwing.com/pngs/133/54/png-transparent-pancakes-served-on-plate-banana-pancakes-scrambled-eggs-breakfast-ihop-pancake-food-recipe-eating-thumbnail.png",
+      "name": "Classic Pancakes",
+      "price": 80,
+      "desc": "Fluffy pancakes served with maple syrup and butter.",
+      "category": "Breakfast",
+      "rating": 4.5
+    },
+    {
+      "id": 7,
+      "img": "https://w7.pngwing.com/pngs/645/475/png-transparent-croissant-bread-croissant-muffin-brunch-bacon-egg-and-cheese-sandwich-bread-croissants-baked-goods-food-baking-thumbnail.png",
+      "name": "Egg and Bacon Croissant",
+      "price": 110,
+      "desc": "Buttery croissant filled with scrambled eggs and crispy bacon.",
+      "category": "Breakfast",
+      "rating": 4.2
+    },
+    {
+      "id": 8,
+      "img": "https://w7.pngwing.com/pngs/683/103/png-transparent-frozen-yogurt-parfait-breakfast-yoghurt-fruit-salad-yogurt-frutti-di-bosco-food-breakfast-thumbnail.png",
+      "name": "Greek Yogurt Parfait",
+      "price": 95,
+      "desc": "Layers of Greek yogurt, berries, honey, and granola.",
+      "category": "Breakfast",
+      "rating": 4.1
+    },
+    {
+      "id": 9,
+      "img": "https://w7.pngwing.com/pngs/400/603/png-transparent-toast-tostytosty-la-tosteria-menu-food-dish-avocado-toast-food-toast-avocado-toast-thumbnail.png",
+      "name": "Avocado Toast",
+      "price": 120,
+      "desc": "Mashed avocado on toasted whole grain bread.",
+      "category": "Breakfast",
+      "rating": 4.6
+    },
+    {
+      "id": 10,
+      "img": "https://w7.pngwing.com/pngs/20/725/png-transparent-grain-bowl-breakfast-cereal-muesli-corn-flakes-bowl-granola-food-breakfast-recipe-thumbnail.png",
+      "name": "Fruit and Nut Oatmeal",
+      "price": 85,
+      "desc": "Hearty oatmeal with fruits, nuts, and honey.",
+      "category": "Breakfast",
+      "rating": 4.5
+    },
+    {
+      "id": 11,
+      "img": "https://w7.pngwing.com/pngs/875/111/png-transparent-north-fish-seafood-dish-smoked-salmon-restaurant-grilled-fish-hd-soup-food-seafood-thumbnail.png",
+      "name": "Grilled Salmon",
+      "price": 190,
+      "desc": "Grilled salmon fillet served with roasted vegetables.",
+      "category": "Dinner",
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "img": "https://w7.pngwing.com/pngs/756/828/png-transparent-taglierini-carbonara-fettuccine-alfredo-chicken-pasta-chicken-fillet-thumbnail.png",
+      "name": "Chicken Alfredo Pasta",
+      "price": 160,
+      "desc": "Creamy fettuccine Alfredo with grilled chicken.",
+      "category": "Dinner",
+      "rating": 4.8
+    },
+    {
+      "id": 13,
+      "img": "https://w7.pngwing.com/pngs/651/721/png-transparent-veggie-burger-vegetable-food-recipe-stir-frying-vegetables-frying-pan-frozen-vegetables-fruit-thumbnail.png",
+      "name": "Vegetable Stir-Fry",
+      "price": 130,
+      "desc": "Mixed vegetables stir-fried in flavorful sauce.",
+      "category": "Dinner",
+      "rating": 4.2
+    },
+    {
+      "id": 14,
+      "img": "https://w7.pngwing.com/pngs/575/331/png-transparent-burrito-taco-bell-mexican-cuisine-chipotle-mexican-grill-menu-thumbnail.png",
+      "name": "Grilled Chicken Burrito Bowl",
+      "price": 160,
+      "desc": "Grilled chicken, rice, beans, veggies, and cheese.",
+      "category": "Dinner",
+      "rating": 4.6
+    },
+    {
+      "id": 15,
+      "img": "https://w7.pngwing.com/pngs/47/171/png-transparent-chinese-noodles-hot-and-sour-soup-risotto-lomi-lamian-slippery-mushrooms-risotto-dusi-soup-food-recipe-thumbnail.png",
+      "name": "Mushroom Risotto",
+      "price": 175,
+      "desc": "Creamy risotto with sautéed mushrooms and parmesan.",
+      "category": "Dinner",
+      "rating": 4.5
+    },
+    {
+      "id": 16,
+      "img": "https://w7.pngwing.com/pngs/47/171/png-transparent-chinese-noodles-hot-and-sour-soup-risotto-lomi-lamian-slippery-mushrooms-risotto-dusi-soup-food-recipe-thumbnail.png",
+      "name": "Cheese and Crackers Platter",
+      "price": 120,
+      "desc": "Artisan cheeses served with crispy crackers.",
+      "category": "Snacks",
+      "rating": 4.3
+    },
+    {
+      "id": 17,
+      "img": "https://w7.pngwing.com/pngs/204/32/png-transparent-crispy-fried-chicken-karaage-chicken-nugget-chicken-fingers-buffalo-wing-carrot-chilli-thumbnail.png",
+      "name": "Crispy Chicken Wings",
+      "price": 130,
+      "desc": "Crispy chicken wings with choice of sauces.",
+      "category": "Snacks",
+      "rating": 4.4
+    },
+    {
+      "id": 18,
+      "img": "https://w7.pngwing.com/pngs/816/163/png-transparent-grilled-skewered-meat-bakery-paneer-tikka-indian-cuisine-vegetarian-cuisine-cake-food-baking-cake-decorating-thumbnail.png",
+      "name": "Paneer Tikka Skewers",
+      "price": 130,
+      "desc": "Grilled paneer skewers served with mint chutney.",
+      "category": "Snacks",
+      "rating": 4.9
+    },
+    {
+      "id": 19,
+      "img": "https://w7.pngwing.com/pngs/356/675/png-transparent-falafel-lebanese-cuisine-take-out-mediterranean-cuisine-hummus-bed-miscellaneous-furniture-food-thumbnail.png",
+      "name": "Hummus and Veggie Platter",
+      "price": 90,
+      "desc": "Creamy hummus served with fresh veggies and pita.",
+      "category": "Snacks",
+      "rating": 4.4
+    },
+    {
+      "id": 20,
+      "img": "https://w7.pngwing.com/pngs/435/847/png-transparent-pincho-canape-skewer-fruit-others-thumbnail.png",
+      "name": "Fruit Skewers",
+      "price": 70,
+      "desc": "Fresh fruit skewers with juicy melon and berries.",
+      "category": "Snacks",
+      "rating": 4.8
+    },
+    {
+      "id": 21,
+      "img": "https://images.unsplash.com/photo-1550547660-d9450f859349",
+      "name": "Classic Veg Burger",
+      "price": 99,
+      "desc": "Crispy veg patty with lettuce and mayo in toasted bun.",
+      "category": "Lunch",
+      "rating": 4.3
+    },
+    {
+      "id": 22,
+      "img": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+      "name": "Double Cheese Burger",
+      "price": 149,
+      "desc": "Juicy patty with double cheddar cheese and sauce.",
+      "category": "Lunch",
+      "rating": 4.7
+    },
+    {
+      "id": 23,
+      "img": "https://images.unsplash.com/photo-1625943553852-781c6dd46faa",
+      "name": "French Fries",
+      "price": 79,
+      "desc": "Golden crispy fries with sea salt.",
+      "category": "Snacks",
+      "rating": 4.4
+    },
+    {
+      "id": 24,
+      "img": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90",
+      "name": "Chicken Nuggets",
+      "price": 129,
+      "desc": "Crispy chicken nuggets served with dipping sauces.",
+      "category": "Snacks",
+      "rating": 4.6
+    },
+    {
+      "id": 25,
+      "img": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+      "name": "Grilled Chicken Wrap",
+      "price": 139,
+      "desc": "Soft wrap filled with grilled chicken and veggies.",
+      "category": "Lunch",
+      "rating": 4.5
+    },
+    {
+      "id": 26,
+      "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+      "name": "Caesar Salad",
+      "price": 119,
+      "desc": "Fresh lettuce tossed with Caesar dressing and croutons.",
+      "category": "Dinner",
+      "rating": 4.2
+    },
+    {
+      "id": 27,
+      "img": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80",
+      "name": "Strawberry Smoothie",
+      "price": 105,
+      "desc": "Refreshing strawberry smoothie with chilled milk.",
+      "category": "Drinks",
+      "rating": 4.7
+    },
+    {
+      "id": 28,
+      "img": "https://images.unsplash.com/photo-1551024601-bec78aea704b",
+      "name": "Cold Coffee",
+      "price": 89,
+      "desc": "Chilled cold coffee blended with ice cream.",
+      "category": "Drinks",
+      "rating": 4.4
+    },
+    {
+      "id": 29,
+      "img": "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+      "name": "Chocolate Brownie",
+      "price": 110,
+      "desc": "Warm chocolate brownie with gooey center.",
+      "category": "Dessert",
+      "rating": 4.9
+    },
+    {
+      "id": 30,
+      "img": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=800&q=80",
+      "name": "Cheese Garlic Bread",
+      "price": 120,
+      "desc": "Garlic bread topped with melted mozzarella and herbs.",
+      "category": "Snacks",
+      "rating": 4.6
+    }
+  ]
+}
